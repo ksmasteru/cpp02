@@ -64,3 +64,9 @@ int     Fixed::toInt(void)     const
     value = this->_fixedNumber >> bits;
     return (value);
 }
+/*An overload of the insertion («) operator that inserts a floating-point representation
+of the fixed-point number into the output stream object passed as parameter.*/
+std::ostream& Fixed::operator<<(std::ostream& os, const Fixed& rhs)
+{
+    
+}

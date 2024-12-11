@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 class Fixed{
     private:
@@ -17,6 +18,10 @@ class Fixed{
         float   toFloat(void)   const;
         int     toInt(void)     const;
 };
+/*An overload of the insertion («) operator that inserts a floating-point representation
+of the fixed-point number into the output stream object passed as parameter.*/
+std::ostream& operator<< (std::ostream& os, const Fixed& rhs);
 
-/*A member function int toInt( void ) const;
-that converts the fixed-point value to an integer value.*/
+
+/*to be able to declare an overload function inside the class the LHS operand should an instance of
+the class which is not the case for << operator : LHS operand is ostream object.*/

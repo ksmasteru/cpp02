@@ -9,7 +9,7 @@ class Fixed{
     public:
         Fixed();
         Fixed(const int num);
-        Fixed(const float num);
+        Fixed(const float num);//!!
         ~Fixed();
         Fixed(const Fixed& rhs);
         Fixed& operator= (const Fixed& rhs);  

@@ -66,7 +66,8 @@ int     Fixed::toInt(void)     const
 }
 /*An overload of the insertion («) operator that inserts a floating-point representation
 of the fixed-point number into the output stream object passed as parameter.*/
-std::ostream& Fixed::operator<<(std::ostream& os, const Fixed& rhs)
+std::ostream& operator<<(std::ostream& os, const Fixed& rhs)
 {
-    
+    os << rhs.getRawBits();
+    return (os);
 }

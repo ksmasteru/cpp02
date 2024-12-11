@@ -17,6 +17,22 @@ class Fixed{
         void    setRawBits(int const raw);
         float   toFloat(void)   const;
         int     toInt(void)     const;
+        
+        bool operator< (const Fixed& rhs); // this points to lhs
+        bool operator> (const Fixed& rhs);
+        bool operator>= (const Fixed& rhs);
+        bool operator<= (const Fixed& rhs);
+        bool operator== (const Fixed& rhs);
+        bool operator!= (const Fixed& rhs);
+        Fixed& operator+ (const Fixed& rhs);
+        Fixed& operator- (const Fixed& rhs);
+        Fixed& operator* (const Fixed& rhs);
+        Fixed& operator/ (const Fixed& rhs);
+        void operator++(); // why not Fixed& and return *this;
+        void operator--();
+        void --operator();
+        // after searching prefix reutn ref  and post return new object.
+
 };
 /*An overload of the insertion («) operator that inserts a floating-point representation
 of the fixed-point number into the output stream object passed as parameter.*/

@@ -78,3 +78,47 @@ std::ostream& operator<<(std::ostream& os, const Fixed& rhs)
     os << rhs.getRawBits();
     return (os);
 }
+
+bool Fixed::operator< (const Fixed& rhs)
+{
+     // bits cannot be changed : this points to LHS
+     if (this->_fixedNumber < rhs._fixedNumber)
+        return (true);
+    return (false);
+}
+
+bool Fixed::operator> (const Fixed& rhs)
+{
+     // bits cannot be changed : this points to LHS
+    if (this->_fixedNumber > rhs._fixedNumber)
+        return (true);
+    return (false);
+}
+
+bool Fixed::operator>=(const Fixed& rhs)
+{
+    if (this->_fixedNumber >= rhs._fixedNumber)
+        return (true);
+    return (false);
+}
+
+bool Fixed::operator<=(const Fixed& rhs)
+{
+    if (this->_fixedNumber <= rhs._fixedNumber)
+        return (true);
+    return (false);
+}
+
+bool Fixed::operator<=(const Fixed& rhs)
+{
+    if (this->_fixedNumber == rhs._fixedNumber)
+        return (true);
+    return (false);
+}
+
+bool Fixed::operator!=(const Fixed& rhs)
+{
+    if (this->_fixedNumber != rhs._fixedNumber)
+        return (true);
+    return (false);
+}
